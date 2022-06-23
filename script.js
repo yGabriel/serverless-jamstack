@@ -13,9 +13,9 @@ results.data.forEach(item => {
   let picCell = newRow.insertCell();
   let nameCell = newRow.insertCell();
   let priceCell = newRow.insertCell();
-  
+
   let picLink = document.createElement("img");
-  picLink.src = pic; 
+  picLink.src = pic;
   picLink.classList.add("product-image");
 
   let nameText = document.createElement("h2");
@@ -85,7 +85,7 @@ const subscribeHandler = async function() {
 }
 subscribeButton.addEventListener('click', subscribeHandler);
 
-// start of shopping cart modal handler 
+// start of shopping cart modal handler
 
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
@@ -117,14 +117,14 @@ document.getElementById("btnShow").addEventListener("click", function () {
   nameCell.appendChild(nameText);
   priceCell.appendChild(priceText);
   })
-  
+
   let grandTotal = localStorage.getItem("total");
   let newRow = table.insertRow(-1);
   let totalCell = newRow.insertCell();
   let grandTotalCell = newRow.insertCell();
 
   let totalText = document.createElement("h3");
-  console.log(totalText); 
+  console.log(totalText);
   totalText.innerHTML = "Grand total: "
   let grandTotalText = document.createElement("h3");
   grandTotalText.innerHTML = "$" + grandTotal;
